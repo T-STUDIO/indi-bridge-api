@@ -11,3 +11,21 @@ WebSocket is required to run INDI drivers from web applications or browsers.
 
 Using the distributed T-AstroWebStudio, you can start drivers, configure settings, and control astronomical equipment from a web application.
 
+
+##Installation method
+
+mkdir -p ~/indi-bridge-api
+
+cd ~/indi-bridge-api
+npm init -y
+
+npm install express ws cors
+
+sudo npm install -g pm2
+
+pm2 start index.js --name "indi-standalone-manager"
+
+pm2 save
+
+pm2 startup
+
